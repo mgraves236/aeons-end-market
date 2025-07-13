@@ -1,5 +1,24 @@
 import ENG from "./game-data";
 
+function dragStartHandler(ev) {
+  // ev.dataTransfer.setData("text", ev.target.id);
+  console.log("HI")
+}
+
+function dragOverHandler(ev) {
+  // ev.preventDefault();
+  console.log("HI2")
+
+}
+
+function dropHandler(ev) {
+  // ev.preventDefault();
+  // const data = ev.dataTransfer.getData("text");
+  // ev.target.appendChild(document.getElementById(data));
+}
+
+
+
 export function displayCards(selectedGames) {
   const cardsContainer = document.getElementById("cards");
   cardsContainer.innerHTML = "";
@@ -11,6 +30,9 @@ export function displayCards(selectedGames) {
       const cardDiv = document.createElement("div");
       cardDiv.className = "cardContainer"
       cardDiv.draggable = true;
+      cardDiv.addEventListener("dragstart", (event) => dragStartHandler(event));
+      cardDiv.addEventListener("ondrop", (event) => dropHandler(event));
+
       const cardContentDiv = document.createElement("div");
       cardContentDiv.className = "cardContentContainer"
 
