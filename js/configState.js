@@ -8,7 +8,6 @@ export function setGame(key, checked) {
   } else {
     selectedGames.delete(key);
   }
-  console.log("Selected games:", Array.from(selectedGames));
   displayCards(Array.from(selectedGames));
 }
 
