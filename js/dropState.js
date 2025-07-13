@@ -5,7 +5,6 @@ selectedContainer.addEventListener("drop", (event) => dropHandler(event));
 
 export function dragStartHandler(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
-  console.log(ev.dataTransfer.getData("text"))
 }
 
 export function dragOverHandler(ev) {

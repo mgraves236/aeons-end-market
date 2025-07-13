@@ -13,7 +13,7 @@ export function displayCards(selectedGames) {
       const cardDiv = document.createElement("div");
       cardDiv.className = "cardContainer"
       cardDiv.draggable = true;
-      cardDiv.addEventListener("ondragstart", (event) => dragStartHandler(event));
+      cardDiv.addEventListener("dragstart", (event) => dragStartHandler(event));
 
       const cardContentDiv = document.createElement("div");
       cardContentDiv.className = "cardContentContainer"

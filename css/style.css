@@ -85,23 +85,30 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+.macondo-swash-caps-regular {
+  font-family: "Macondo Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   padding: 0;
   margin: 0;
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  background-color: black;
+  font-family: Helvetica;
 }
 
 main {
-  /*display: flex;*/
-  height: 100%;
-  width: 100%;
-  /*flex-direction: row;*/
   top: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
 }
 
 #config ul {
@@ -111,6 +118,10 @@ main {
   height: 100%;
 }
 
+#config li {
+    margin-bottom: 0.5em;
+}
+
 #config {
   color: white;
   background-color: #222222;
@@ -118,24 +129,46 @@ main {
   width: 10%;
   padding: 1em;
   margin: 0;
-  display: inline-block;
-  /*position: fixed;*/
+  flex: 1 0 10%;
 }
 
 #cards {
-  /*padding-left: 13rem;*/
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 80%;
   gap: 0.5em 0.5em;
-  align-content: center;
-  margin: 0;
+  align-content: space-around;
+  justify-content: center;
+  margin: 0.5em 0 0.5em 0;
+  overflow-y: auto;
+}
+
+#cards::before {
+  content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url("../img/Aeons-End-Site.png");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    z-index: -1;
 }
 
 .cardContainer {
   width: 15rem;
+  z-index: 1;
   /*margin: 0.5em;*/
+}
+
+.cardContainer img {
+    border: solid transparent;
+    border-radius: 0.8em;
 }
 
 .cardContentContainer {
