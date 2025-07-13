@@ -1,22 +1,5 @@
 import ENG from "./game-data";
-
-function dragStartHandler(ev) {
-  // ev.dataTransfer.setData("text", ev.target.id);
-  console.log("HI")
-}
-
-function dragOverHandler(ev) {
-  // ev.preventDefault();
-  console.log("HI2")
-
-}
-
-function dropHandler(ev) {
-  // ev.preventDefault();
-  // const data = ev.dataTransfer.getData("text");
-  // ev.target.appendChild(document.getElementById(data));
-}
-
+import {dragStartHandler, dropHandler, dragOverHandler} from "./dropState.js";
 
 
 export function displayCards(selectedGames) {
@@ -30,8 +13,7 @@ export function displayCards(selectedGames) {
       const cardDiv = document.createElement("div");
       cardDiv.className = "cardContainer"
       cardDiv.draggable = true;
-      cardDiv.addEventListener("dragstart", (event) => dragStartHandler(event));
-      cardDiv.addEventListener("ondrop", (event) => dropHandler(event));
+      cardDiv.addEventListener("ondragstart", (event) => dragStartHandler(event));
 
       const cardContentDiv = document.createElement("div");
       cardContentDiv.className = "cardContentContainer"
@@ -39,12 +21,14 @@ export function displayCards(selectedGames) {
       const img = document.createElement("img")
 
       img.src = "https://cdn.shopify.com/s/files/1/0384/0265/files/" + gameSetDataCards[j]["id"] + ".jpg";
-      img.style.width = "10em";
+      img.style.width = "15em";
+      img.id = gameSetDataCards[j]["id"];
       cardDiv.appendChild(img)
       // Image not found, generate a placeholder
       img.onerror = function () {
         img.remove();
         cardDiv.appendChild(cardContentDiv);
+        cardDiv.id = gameSetDataCards[j]["id"];
         const cost = document.createElement("div");
         cost.className = "cardCost"
         cost.innerHTML = gameSetDataCards[j]["cost"];
