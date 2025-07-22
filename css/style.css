@@ -172,8 +172,8 @@ main {
 }
 
 .cardContentContainer {
-  width: 15em;
-  height: 21em;
+  /*width: 15em;*/
+  /*height: 21em;*/
   border: 0.5em;
   color: #000000;
   background: #ecebeb;
@@ -222,10 +222,13 @@ main {
 }
 
 #chosenCards {
-  width: 10%;
+  width: 20%;
   height: 100%;
-  display: inline-block;
+  display: flex;
+  flex-flow: column;
+  flex-grow: 0;
   background-color: #888888;
+  overflow: scroll;
 
   /*position: fixed;*/
   /*display: inline-block;*/

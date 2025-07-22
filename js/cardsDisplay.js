@@ -1,4 +1,5 @@
 import ENG from "./game-data";
+import {selectedCards} from "./chosenCardsState.js";
 import {dragStartHandler, dropHandler, dragOverHandler} from "./dropState.js";
 
 
@@ -9,6 +10,14 @@ export function displayCards(selectedGames) {
   for (let i = 0; i < selectedGames.length; i++) {
     let gameSetDataCards = ENG[selectedGames[i]]["data"]["cards"];
     for (let j = 0; j < gameSetDataCards.length; j++) {
+
+      if (selectedCards.has(gameSetDataCards[j]["id"])) {
+
+
+        // card.draggable = true;
+        // card.addEventListener("dragstart", (event) => dragStartHandler(event));
+        continue;
+      }
 
       const cardDiv = document.createElement("div");
       cardDiv.className = "cardContainer"
@@ -27,6 +36,8 @@ export function displayCards(selectedGames) {
       // Image not found, generate a placeholder
       img.onerror = function () {
         img.remove();
+        cardContentDiv.style.height = "21em";
+        cardContentDiv.style.width = "15em";
         cardDiv.appendChild(cardContentDiv);
         cardDiv.id = gameSetDataCards[j]["id"];
         const cost = document.createElement("div");
