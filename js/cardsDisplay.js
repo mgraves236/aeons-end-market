@@ -1,28 +1,22 @@
 import ENG from "./game-data";
 import {selectedCards} from "./chosenCardsState.js";
-import {dragStartHandler, dropHandler, dragOverHandler} from "./dropState.js";
 
 
 export function displayCards(selectedGames) {
-  const cardsContainer = document.getElementById("cards");
+  const cardsContainer = document.getElementById("cardList");
   cardsContainer.innerHTML = "";
-  console.log(selectedGames)
   for (let i = 0; i < selectedGames.length; i++) {
     let gameSetDataCards = ENG[selectedGames[i]]["data"]["cards"];
     for (let j = 0; j < gameSetDataCards.length; j++) {
 
       if (selectedCards.has(gameSetDataCards[j]["id"])) {
-
-
-        // card.draggable = true;
-        // card.addEventListener("dragstart", (event) => dragStartHandler(event));
         continue;
       }
 
       const cardDiv = document.createElement("div");
-      cardDiv.className = "cardContainer"
-      cardDiv.draggable = true;
-      cardDiv.addEventListener("dragstart", (event) => dragStartHandler(event));
+      cardDiv.className = "cardContainer";
+      cardDiv.id = gameSetDataCards[j]["id"];
+
 
       const cardContentDiv = document.createElement("div");
       cardContentDiv.className = "cardContentContainer"
@@ -31,7 +25,6 @@ export function displayCards(selectedGames) {
 
       img.src = "https://cdn.shopify.com/s/files/1/0384/0265/files/" + gameSetDataCards[j]["id"] + ".jpg";
       img.style.width = "15em";
-      img.id = gameSetDataCards[j]["id"];
       cardDiv.appendChild(img)
       // Image not found, generate a placeholder
       img.onerror = function () {
@@ -39,7 +32,7 @@ export function displayCards(selectedGames) {
         cardContentDiv.style.height = "21em";
         cardContentDiv.style.width = "15em";
         cardDiv.appendChild(cardContentDiv);
-        cardDiv.id = gameSetDataCards[j]["id"];
+        // cardDiv.id = gameSetDataCards[j]["id"];
         const cost = document.createElement("div");
         cost.className = "cardCost"
         cost.innerHTML = gameSetDataCards[j]["cost"];
@@ -70,7 +63,7 @@ export function displayCards(selectedGames) {
           description.style.backgroundColor = "#D7EAF6"
         }
       };
-      document.getElementById("cards").appendChild(cardDiv);
+      document.getElementById("cardList").appendChild(cardDiv);
     }
   }
 }
