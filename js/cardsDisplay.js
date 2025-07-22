@@ -1,4 +1,4 @@
-import ENG from "./game-data";
+import ENG from "./game-data/index.js";
 import {selectedCards} from "./chosenCardsState.js";
 
 

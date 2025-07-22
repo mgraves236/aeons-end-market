@@ -1,9 +1,6 @@
 import {displayCards} from "./cardsDisplay.js";
-import ENG from "./game-data";
 
 export const selectedGames = new Set();
-
-
 
 export function setGame(key, checked) {
   if (checked) {
