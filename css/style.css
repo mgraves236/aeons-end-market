@@ -109,6 +109,7 @@ main {
   height: 100vh;
   width: 100vw;
   display: flex;
+  /*align-items: center;*/
 }
 
 #config ul {
@@ -122,14 +123,21 @@ main {
     margin-bottom: 0.5em;
 }
 
-#config {
+
+#config, #chosenCards {
   color: white;
-  background-color: #222222;
-  height: 100%;
-  width: 10%;
+  background-color: rgba(34, 34, 34, 0.90);
+  border-radius: 1em;
+  height: 90%;
+  margin: 0.5em;
   padding: 1em;
-  margin: 0;
+
+}
+
+#config {
+  width: 10%;
   flex: 1 0 10%;
+
 }
 
 #cardList {
@@ -144,7 +152,7 @@ main {
   overflow-y: auto;
 }
 
-#cardList::before {
+main::before {
   content: ' ';
     display: block;
     position: absolute;
@@ -160,14 +168,7 @@ main {
     z-index: -1;
 }
 
-#chosenCards {
-  width: 20%;
-  height: 100%;
-  /*display: flex;*/
-  /*flex-flow: column;*/
-  background-color: #888888;
 
-}
 
 #chosenCards > div {
   flex-shrink: 1;
@@ -245,16 +246,18 @@ main {
   display: inline-block;
 }
 
+#chosenCards {
+  width: 20%;
+  height: 93%;
+}
+
 #chosenCardsList {
   width: 100%;
   height: 90%;
   display: flex;
   flex-flow: column;
-  overflow: scroll;
+  overflow-y: scroll;
 
-  /*position: fixed;*/
-  /*display: inline-block;*/
-  background-color: #750b0b;
 }
 
 #chosenCardsOptions {
@@ -262,8 +265,19 @@ main {
   height: 10%;
   display: flex;
   flex-flow: column;
+  align-items: center;
 }
 
+#chosenCardsOptions button {
+  width: 40%;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  margin: 0.5em;
+  background-color: #b3d4fc;
+  border-radius: 0.5em;
+  color: #250077;
+  font-weight: bold;
+}
 
 
 /* ==========================================================================
