@@ -18,7 +18,7 @@ On the right hand side, there is a container in which you can drop the cards of 
 txt file locally) or import your set-up. Click on the arrow next to the container to expand it and view
 your cards easier.
 
-The tool will remain you about standard set-up type amount of 3 gems, 2 relics, and 4 spells.
+The tool will remind you about standard set-up type amount of 3 gems, 2 relics, and 4 spells.
 However, it's not required to obey these rules to export/import your configuration.
 
 ## Coming functionalities
