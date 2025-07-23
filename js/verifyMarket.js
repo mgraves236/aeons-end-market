@@ -1,7 +1,7 @@
 import {getSelectedCards} from "./chosenCardsState.js";
 import {findCardById} from "./export.js";
 
-let varSelectedCards = getSelectedCards();
+
 
 let expectedMarket = {
   "Gem": 3,
@@ -9,7 +9,8 @@ let expectedMarket = {
   "Relic": 2
 }
 
-function verifyMarket() {
+export function verifyMarket() {
+  let varSelectedCards = getSelectedCards();
   let typeCount = {
     "Gem": 0,
     "Spell": 0,
@@ -25,6 +26,10 @@ function verifyMarket() {
       let cardData = data["cardData"];
 
         for (const type in expectedMarket) {
+          console.log(type)
+          console.log(cardData["type"] )
+
+
           if (cardData["type"] === type) {
             typeCount[type] += 1;
           }

@@ -1,21 +1,21 @@
-import { aeonsEndData } from './aeonsEnd';
-import { buriedSecretsData } from './buriedSecrets';
-import { intoTheWildData } from './intoTheWild';
-import { legacyData } from './legacy';
-import { newAgeData } from './theNewAge';
-import { outerDarkData } from './outerDark';
-import { promosData } from './promos';
-import { shatteredDreamsData } from './shatteredDreams';
-import { theAncientsData } from './theAncients';
-import { theDepthsData } from './theDepths';
-import { theNamelessData } from './theNameless';
-import { theVoidData } from './theVoid';
-import { warEternalData } from './warEternal';
-import { outcastsData } from './outcasts';
-import { returnToGraveholdData } from './returnToGravehold';
-import { southernVillageData } from './southernVillage';
-import { theRuinsData } from './theRuins';
-import { legacyOfGraveholdData } from './legacyOfGravehold';
+import { aeonsEndData } from './aeonsEnd/index.js';
+import { buriedSecretsData } from './buriedSecrets/index.js';
+import { intoTheWildData } from './intoTheWild/index.js';
+import { legacyData } from './legacy/index.js';
+import { newAgeData } from './theNewAge/index.js';
+import { outerDarkData } from './outerDark/index.js';
+import { promosData } from './promos/index.js';
+import { shatteredDreamsData } from './shatteredDreams/index.js';
+import { theAncientsData } from './theAncients/index.js';
+import { theDepthsData } from './theDepths/index.js';
+import { theNamelessData } from './theNameless/index.js';
+import { theVoidData } from './theVoid/index.js';
+import { warEternalData } from './warEternal/index.js';
+import { outcastsData } from './outcasts/index.js';
+import { returnToGraveholdData } from './returnToGravehold/index.js';
+import { southernVillageData } from './southernVillage/index.js';
+import { theRuinsData } from './theRuins/index.js';
+import { legacyOfGraveholdData } from './legacyOfGravehold/index.js';
 const ENG = {
     AE: {
       'data': aeonsEndData,

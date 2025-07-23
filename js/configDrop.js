@@ -1,4 +1,5 @@
 import {removeSelectedCard, setSelectedCards} from "./chosenCardsState.js";
+import {verifyMarket} from "./verifyMarket.js";
 
 const left = document.getElementById('cardList');
 const right = document.getElementById('chosenCardsList');
@@ -17,4 +18,5 @@ drake.on('drop', (el, target, source, sibling) => {
   } else {
     setSelectedCards(el.id);
   }
+  verifyMarket();
 })
