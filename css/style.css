@@ -324,7 +324,7 @@ input[type="file"] {
 #importBtn {
   padding-bottom: 0.15em;
   padding-top: 0.15em;
-  width: 38%;
+  /*width: 38%;*/
 }
 
 .info {
