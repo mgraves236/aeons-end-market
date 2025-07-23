@@ -1,10 +1,11 @@
 # Aeon's End Market Maker
 
-Ever found it cumbersome to search through all your cards to find a perfect market match for the Nemezis?
+Ever found it cumbersome to search through all your cards to find a perfect market match for the Nemesis?
 Or do you mix your sets with your friends' and you'd like to prepare a nice market set-up in advance?
 
 Aeon's End Market Maker is the tool you need to comfortably create a market set-up of your dreams!
 
+Access the tool under https://github.com/mgraves236/aeons-end-market.
 ## How to use it?
 
 Aeon's End Market Maker is a tool with straightforward functionalities.
