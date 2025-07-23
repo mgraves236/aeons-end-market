@@ -40,7 +40,6 @@ export function findCardById(id) {
     const game = ENG[gameKey];
     const cardsMarket = game["data"]["cards"];
     const card = cardsMarket.find(c => c["id"] === id);
-    console.log(card)
     if (card) {
       return {
         "cardData": card,

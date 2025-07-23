@@ -12,7 +12,6 @@ const containers = [
 const drake = dragula(containers);
 
 drake.on('drop', (el, target, source, sibling) => {
-  console.log('Dropped', el, 'into', target);
   if (target.id === "cardList") {
     removeSelectedCard(el.id);
   } else {
