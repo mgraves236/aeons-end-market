@@ -303,7 +303,7 @@ main::before {
   align-self: flex-end;
 }
 
-#chosenCardsOptions button {
+#chosenCardsOptions button, #importBtn {
   width: 40%;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
@@ -313,6 +313,18 @@ main::before {
   color: #250077;
   font-weight: bold;
   border: #abc6ec solid 0.2em;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#importBtn {
+  padding-bottom: 0.15em;
+  padding-top: 0.15em;
+  width: 38%;
 }
 
 .info {

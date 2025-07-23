@@ -43,7 +43,11 @@
 
       <div id="chosenCardsList"></div>
       <div id="chosenCardsOptions">
-        <button id="importBtn">Import</button>
+        <label for="file-upload" id="importBtn">
+         Import
+        </label>
+        <input id='file-upload' type="file" accept="text">
+<!--        <button id="importBtn">Import</button>-->
         <button id="exportBtn">Export</button>
       </div>
     </div>
@@ -53,6 +57,7 @@
 <script src="https://kit.fontawesome.com/af05d5b860.js" crossorigin="anonymous"></script>
 <script type="module" src="js/game-data/index.js"></script>
 <script type="module" src="js/export.js"></script>
+<script type="module" src="js/import.js"></script>
 <script type="module" src="js/configDisplay.js"></script>
 <script type="module" src="js/configState.js"></script>
 <script type="module" src="js/cardsDisplay.js"></script>
