@@ -17,7 +17,8 @@ export function exportSelectedCards() {
         'id': cardId,
         'name': cardData["name"],
         'desc': cardData["effect"],
-        'type':cardData["type"],
+        'type': cardData["type"],
+        'cost': cardsJson["cost"],
         'game': gameData,
 
     });
@@ -34,7 +35,7 @@ export function exportSelectedCards() {
 
 }
 
-function findCardById(id) {
+export function findCardById(id) {
   for (const gameKey in ENG) {
     const game = ENG[gameKey];
     const cardsMarket = game["data"]["cards"];
