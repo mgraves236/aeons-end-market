@@ -1,5 +1,5 @@
 import {getSelectedCards} from "./chosenCardsState.js";
-import ENG from "./game-data";
+import ENG from "./game-data/index.js";
 
 
 document.getElementById('exportBtn').addEventListener('click', exportSelectedCards);
