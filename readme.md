@@ -5,7 +5,7 @@ Or do you mix your sets with your friends' and you'd like to prepare a nice mark
 
 Aeon's End Market Maker is the tool you need to comfortably create a market set-up of your dreams!
 
-Access the tool under https://github.com/mgraves236/aeons-end-market.
+Access the tool under[ https://github.com/mgraves236/aeons-end-market](https://mgraves236.github.io/aeons-end-market).
 ## How to use it?
 
 Aeon's End Market Maker is a tool with straightforward functionalities.
