@@ -25,6 +25,9 @@ However, it's not required to obey these rules to export/import your configurati
 
 If you see that the tool is missing something important, feel free to contribute or contact me!
 
-| Functionality                   | State           |
+| Functionality                 | State           |
 |-------------------------------|-----------------|
 | Card filtering based on types | Not implemented |
+| Searching cards by keyword    | Not implemented |
+| Mobile layout                 | Not implemented |
+| Bigger resolution fix         | Not implemented |
